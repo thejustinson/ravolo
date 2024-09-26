@@ -1,8 +1,14 @@
-import React from 'react'
+"use client"
+
+import Hero from "./components/Hero"
+import HomeNav from "./components/HomeNav"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <HomeNav/>
+      <Hero/>
+    </>
   )
 }
 
