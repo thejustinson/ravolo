@@ -9,14 +9,25 @@ import {
 } from "@remixicon/react";
 
 interface FeatureProps {
+  index: number;
   icon: React.ReactElement;
   title: string;
   text: string;
 }
 
-const Feature: React.FC<FeatureProps> = ({ icon, title, text }) => {
+const Feature: React.FC<FeatureProps> = ({ index, icon, title, text }) => {
   return (
-    <div className="space-y-2 py-10 border-t border-t-dark-green">
+    <div
+      className={`
+        space-y-2 px-5 py-10 border-dark-green border-t
+        ${index == 1 ? "lg:border-r lg:border-b lg:border-t-0" : ""} 
+        ${index == 2 ? "lg:border-x lg:border-b lg:border-t-0" : ""}
+        ${index == 3 ? "lg:border-l lg:border-b lg:border-t-0" : ""} 
+        ${index == 4 ? "lg:border-r" : ""} 
+        ${index == 5 ? "lg:border-x" : ""}
+        ${index == 6 ? "lg:border-l" : ""} 
+      `}
+    >
       <div className="">{icon}</div>
       <h3 className="text-lg font-bold">{title}</h3>
       <p className="text-neutral-400">{text}</p>
@@ -31,13 +42,13 @@ const Features: React.FC = () => {
       title: "Cross-Game Compatibility",
       text: "Break the boundaries between games. Ravolo enables assets to move seamlessly across titles, unlocking new gameplay possibilities and a shared experience.",
     },
-    
+
     {
       icon: <RiShape2Line size={24} className="text-secondary-green" />,
       title: "Evolving Digital Assets",
       text: "Your in-game assets aren't static. With Ravolo, assets evolve as you progress, carrying your achievements and experiences across multiple games, allowing for dynamic and personalized growth",
     },
-    
+
     {
       icon: <RiCurrencyLine size={24} className="text-secondary-green" />,
       title: "In-Game Economy Tools",
@@ -57,7 +68,7 @@ const Features: React.FC = () => {
       icon: <RiUserStarLine size={24} className="text-secondary-green" />,
       title: "Player Empowerment",
       text: "Ravolo puts players in control. Own your assets, transfer them between worlds, and let your in-game progression continue regardless of the game you play next.",
-    }
+    },
   ];
 
   return (
@@ -65,10 +76,11 @@ const Features: React.FC = () => {
       <h2 className="text-3xl sm:text-4xl font-bold max-w-[450px] mb-12">
         Dynamic Cross-Game NFT Experiences
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid div grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {featureItems.map((featureItem, index) => (
           <Feature
             key={index}
+            index={index + 1}
             icon={featureItem.icon}
             title={featureItem.title}
             text={featureItem.text}
