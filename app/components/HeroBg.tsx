@@ -12,21 +12,21 @@ const HeroBg: React.FC = () => {
   ];
 
   const mobileIcons = [
-    { image: "/game-icons/game-icon-l.png", position: "bottom-20 left-[-25px] scale-[0.8]", delay: 0 },
-    { image: "/game-icons/game-icon-r.png", position: "bottom-[120px] right-[-40px] scale-[0.6]", delay: 0.5 },
-    { image: "/game-icons/game-icon-b.png", position: "bottom-0 right-[-20px] z[-1]", delay: 1 },
-    { image: "/game-icons/game-icon-2.png", position: "bottom-[-50px] left-[20px]", delay: 1.5 },
-    { image: "/game-icons/game-icon-1.png", position: "bottom-24 right-1/3", delay: 2 },
+    { image: "/game-icons/game-icon-l.png", position: "bottom-16 left-[-15px] scale-[0.6]", delay: 0 },
+    { image: "/game-icons/game-icon-r.png", position: "bottom-[80px] right-[-20px] scale-[0.5]", delay: 0.5 },
+    { image: "/game-icons/game-icon-b.png", position: "bottom-0 right-[-10px] scale-[0.7] z-[-1]", delay: 1 },
+    { image: "/game-icons/game-icon-2.png", position: "bottom-[-30px] left-[10px] scale-[0.7]", delay: 1.5 },
+    { image: "/game-icons/game-icon-1.png", position: "bottom-20 right-1/3 scale-[0.7]", delay: 2 },
   ];
 
   return (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-      <div className="hidden md:block">
+      <div className="hidden sm:block">
         {desktopIcons.map((icon, index) => (
           <HeroGameIcons key={index} {...icon} />
         ))}
       </div>
-      <div className="md:hidden">
+      <div className="sm:hidden">
         {mobileIcons.map((icon, index) => (
           <HeroGameIcons key={index} {...icon} />
         ))}

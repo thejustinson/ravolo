@@ -13,7 +13,7 @@ const HeroGameIcons: React.FC<HeroGameIconsProps> = ({ image, position, delay = 
     <motion.div
       className={`absolute ${position}`}
       initial={{ y: 0 }}
-      animate={{ y: [-5, 5, -5] }}
+      animate={{ y: [-3, 3, -3] }}
       transition={{
         repeat: Infinity,
         duration: 4,
@@ -24,9 +24,9 @@ const HeroGameIcons: React.FC<HeroGameIconsProps> = ({ image, position, delay = 
       <Image
         src={image}
         alt='Game Icon'
-        width={150}
-        height={150}
-        className="w-[130px]"
+        width={100}
+        height={100}
+        className="w-[80px] sm:w-[100px] md:w-[130px]"
       />
     </motion.div>
   );

@@ -126,7 +126,7 @@ const ThreeSteps: React.FC = () => {
       </div>
 
       <p className="text-center py-10">
-        <a href="https://">Community</a>
+        <a href="https://x.com/useravolo">Community</a>
       </p>
     </div>
   );

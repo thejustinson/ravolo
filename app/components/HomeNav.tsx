@@ -28,7 +28,7 @@ const HomeNav = () => {
         
         <div className="hidden md:block">
           <ul className="flex gap-6">
-            <li className="hover:text-main-green cursor-pointer">Community</li>
+            <a href="https://x.com/useravolo"><li className="hover:text-main-green cursor-pointer">Community</li></a>
             <li className="hover:text-main-green cursor-pointer">Join Waitlist</li>
           </ul>
         </div>
@@ -43,8 +43,8 @@ const HomeNav = () => {
       {isMenuOpen && (
         <div className="md:hidden mt-4">
           <ul className="flex flex-col gap-4">
-            <li className="hover:text-gray-600 cursor-pointer">Community</li>
-            <li className="hover:text-gray-600 cursor-pointer">Join Waitlist</li>
+          <a href="https://x.com/useravolo"><li className="hover:text-main-green cursor-pointer">Community</li></a>
+            <li className="hover:text-main-green cursor-pointer">Join Waitlist</li>
           </ul>
         </div>
       )}

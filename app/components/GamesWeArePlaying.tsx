@@ -19,17 +19,17 @@ const games: Game[] = [
     link: "#",
   },
   {
-    name: "Pup Pup",
-    image: "/games-we-are-playing/pup-pup.png",
+    name: "Halo Demo",
+    image: "/games-we-are-playing/halo-demo.png",
     description:
-      "Experience a heartwarming adventure as you guide a lost puppy through a vibrant world filled with friendly characters and challenging puzzles. Explore charming towns, discover hidden treasures, and make new furry friends along the way!",
+      "Step into the boots of a legendary Spartan and embark on a thrilling mission to defend humanity from a ruthless alien threat. Engage in intense combat, master powerful weaponry, and uncover ancient secrets in this epic sci-fi adventure.",
     link: "#",
   },
   {
-    name: "Pup Pup",
-    image: "/games-we-are-playing/pup-pup.png",
+    name: "Pixel Party",
+    image: "/games-we-are-playing/pixel-party.png",
     description:
-      "Experience a heartwarming adventure as you guide a lost puppy through a vibrant world filled with friendly characters and challenging puzzles. Explore charming towns, discover hidden treasures, and make new furry friends along the way!",
+      "Navigate a neon-lit metropolis filled with cybernetic enhancements, neon-lit skyscrapers, and dangerous street gangs. Customize your character with futuristic gear, engage in thrilling combat, and uncover the secrets of a dystopian future.",
     link: "#",
   },
 ];
