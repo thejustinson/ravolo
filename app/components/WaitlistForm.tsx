@@ -109,7 +109,7 @@ const WaitlistForm = () => {
               setRole("developer");
             }}
           >
-            I'm a developer
+            I&apos;m a developer
           </span>
           <span
             className={`w-full text-neutral-400 ${
@@ -121,7 +121,7 @@ const WaitlistForm = () => {
               setRole("gamer");
             }}
           >
-            I'm a gamer
+            I&apos;m a gamer
           </span>
         </div>
         <button className="bg-main-green text-dark-green font-bold py-3 px-6 rounded-lg hover:bg-opacity-60 transition duration-300 active:scale-75">
