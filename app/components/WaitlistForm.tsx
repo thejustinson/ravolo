@@ -44,13 +44,18 @@ const WaitlistForm = () => {
       setEmail("");
       setName("");
       setRole("");
-    } catch (error: any) {
-      if (error.details == `Key (email)=(${email}) already exists.`) {
-        setMessage("This email address already exists in the waitlist")
+    } catch (error) {
+      if (error instanceof Error) {
+        if (error.message.includes(`Key (email)=(${email}) already exists.`)) {
+          setMessage("This email address already exists in the waitlist");
+        } else {
+          setMessage("Error joining waitlist: " + error.message);
+        }
+        setMessageType("error");
       } else {
-        setMessage("Error joining waitlist: " + (error as Error).message);
+        setMessage("An unexpected error occurred");
+        setMessageType("error");
       }
-      setMessageType("error");
     }
   };
 
