@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import { RiMenuLine, RiCloseLine } from '@remixicon/react';
+import React, { useState } from "react";
+import { RiMenuLine, RiCloseLine } from "@remixicon/react";
 import Image from "next/image";
 
 const HomeNav = () => {
@@ -25,26 +25,44 @@ const HomeNav = () => {
             />
           </div>
         </div>
-        
+
         <div className="hidden md:block">
           <ul className="flex gap-6">
-            <a href="https://x.com/useravolo"><li className="hover:text-main-green cursor-pointer">Community</li></a>
-            <li className="hover:text-main-green cursor-pointer">Join Waitlist</li>
+            <a href="https://x.com/useravolo" target="_blank">
+              <li className="hover:text-main-green cursor-pointer">
+                Community
+              </li>
+            </a>
+            <a
+              href="#join-waitlist"
+              className="hover:text-main-green cursor-pointer"
+            >
+              Join Waitlist
+            </a>
           </ul>
         </div>
-        
+
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
             {isMenuOpen ? <RiCloseLine size={24} /> : <RiMenuLine size={24} />}
           </button>
         </div>
       </div>
-      
+
       {isMenuOpen && (
         <div className="md:hidden mt-4">
           <ul className="flex flex-col gap-4">
-          <a href="https://x.com/useravolo"><li className="hover:text-main-green cursor-pointer">Community</li></a>
-            <li className="hover:text-main-green cursor-pointer">Join Waitlist</li>
+            <a href="https://x.com/useravolo" target="_blank">
+              <li className="hover:text-main-green cursor-pointer">
+                Community
+              </li>
+            </a>
+            <a
+              href="#join-waitlist"
+              className="hover:text-main-green cursor-pointer"
+            >
+              Join Waitlist
+            </a>
           </ul>
         </div>
       )}

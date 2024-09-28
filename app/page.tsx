@@ -2,6 +2,7 @@
 
 import EasyToUse from "./components/EasyToUse";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import GamesWeArePlaying from "./components/GamesWeArePlaying";
 import Hero from "./components/Hero";
 import HomeNav from "./components/HomeNav";
@@ -16,6 +17,7 @@ const Home = () => {
       <GamesWeArePlaying />
       <EasyToUse />
       <ThreeSteps />
+      <Footer/>
     </>
   );
 };

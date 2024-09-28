@@ -5,6 +5,7 @@ import {
   RiRocketLine,
 } from "@remixicon/react";
 import { motion, useInView } from "framer-motion";
+import WaitlistForm from "./WaitlistForm";
 
 interface OneStepProps {
   icon: React.ReactElement;
@@ -118,16 +119,7 @@ const ThreeSteps: React.FC = () => {
         ))}
       </div>
 
-      <div className="border-y border-dark-green py-10 flex flex-col items-center justify-center mt-5 gap-5">
-        <h1 className="text-4xl md:text-6xl text-center font-extrabold">Join the Future of Gaming</h1>
-        <button className="bg-main-green text-dark-green font-bold py-2 px-6 rounded-lg hover:bg-opacity-60 transition duration-300 active:scale-75">
-          Join the Waitlist
-        </button>
-      </div>
-
-      <p className="text-center py-10">
-        <a href="https://x.com/useravolo">Community</a>
-      </p>
+      <WaitlistForm/>
     </div>
   );
 };

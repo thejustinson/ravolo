@@ -41,11 +41,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <button 
+          <a href='#join-waitlist'
             className="bg-main-green text-dark-green font-bold py-2 px-6 rounded-lg hover:bg-opacity-60 transition duration-300 active:scale-75 text-sm sm:text-base"
           >
             Join the Waitlist
-          </button>
+          </a>
         </motion.div>
       </div>
 
