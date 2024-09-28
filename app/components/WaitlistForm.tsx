@@ -8,9 +8,11 @@ const WaitlistForm = () => {
   const [role, setRole] = useState("developer");
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true)
 
     setName(name.trim());
     setEmail(email.trim());
@@ -18,18 +20,21 @@ const WaitlistForm = () => {
     if (!name || !email) {
       setMessage("Fill your name and your email address");
       setMessageType("error");
+      setIsSubmitting(false)
       return;
     }
 
     if (!isValidName(name)) {
       setMessage("Please enter a valid name");
       setMessageType("error");
+      setIsSubmitting(false)
       return;
     }
 
     if (!isValidEmail(email)) {
       setMessage("Please enter a valid email");
       setMessageType("error");
+      setIsSubmitting(false)
       return;
     }
 
@@ -40,6 +45,7 @@ const WaitlistForm = () => {
 
       if (error) throw error;
       setMessage("Thanks for joining our waitlist!");
+      setIsSubmitting(false)
       setMessageType("success");
       setEmail("");
       setName("");
@@ -56,6 +62,7 @@ const WaitlistForm = () => {
         setMessage("An unexpected error occurred");
         setMessageType("error");
       }
+      setIsSubmitting(false)
     }
   };
 
@@ -86,6 +93,7 @@ const WaitlistForm = () => {
         <div className="w-full bg-dark-green py-3 px-4 rounded focus-within:border-2 border-main-green duration-200">
           <input
             type="text"
+            value={name}
             className="w-full bg-transparent placeholder:text-neutral-400 text-neutral-400 outline-none rounded"
             placeholder="Name"
             onChange={(e) => {
@@ -96,6 +104,7 @@ const WaitlistForm = () => {
         <div className="w-full bg-dark-green py-3 px-4 rounded focus-within:border-2 border-main-green duration-200">
           <input
             type="text"
+            value={email}
             className="w-full bg-transparent placeholder:text-neutral-400 text-neutral-400 outline-none rounded"
             placeholder="Email Address"
             onChange={(e) => {
@@ -129,8 +138,8 @@ const WaitlistForm = () => {
             I&apos;m a gamer
           </span>
         </div>
-        <button className="bg-main-green text-dark-green font-bold py-3 px-6 rounded-lg hover:bg-opacity-60 transition duration-300 active:scale-75">
-          Join the Waitlist
+        <button className={`${isSubmitting ? "bg-opacity-50" : "bg-opacity-100"} bg-main-green text-dark-green font-bold py-3 px-6 rounded-lg md:hover:bg-opacity-60 transition duration-300 active:scale-75`} disabled={isSubmitting}>
+          {isSubmitting ? "Joining the Waitlist..." : "Join the Waitlist"}
         </button>
       </form>
     </div>
